@@ -3,3 +3,11 @@ sudo: false
 script: ./tool/travis.sh
 after_success:
   - sh -c "travis/upload_coveralls_report.sh"
+dart:
+  - dev
+branches:
+  only:
+    - master
+cache:
+  directories:
+  - $HOME/.pub-cache
